@@ -1,0 +1,31 @@
+Selenium Notes
+
+#1. To Launch the browser:
+	System.setProperty("webdriver.chrome.driver","path of chromedriver.exe");
+	WebDriver driver = new ChromeDriver(); 
+	
+#2. to launch a webpage:
+	driver.get("Fully qualified URL");
+	driver.navigateTo("fully Qualified URL")
+	
+#3. to navigate forward back & refresh:
+	driver.navigate().forward();
+	driver.navigate().back();
+	driver.navigate().refresh();
+	
+#4: To get a screenshot of the webpage:
+	to get the screenshot of the webpage we need to typecast driver object to TakeScreenshot Interface. and use method getScreenshotAs()
+	
+	File source = ((TakeScreenshot)driver).getScreenshotAs("OutputType.FILE");
+	Return type of getScreenshotAs method is a file, This file will store the screenshot in temp memory of the machine.
+	
+	To get the file on our desired location, we need to create File class object by providing path to new location where we wish to store the screenshot
+	File destination = new File("path to destination folder including file name and file extension(png/jpg)");
+	
+	Now by using copy() method of FileHandler class, we can copy screenshot file to destination folder. 
+	
+	
+	
+	
+	
+	
